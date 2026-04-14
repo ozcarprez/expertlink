@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ExpertLink - Videollamada en Vivo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#93000e",
+                        "surface-dim": "#d8dadc",
+                        "background": "#f8f9fb",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#eff1f3",
+                        "secondary": "#1b6d24",
+                        "surface-container-high": "#e6e8ea",
+                        "primary-container": "#185fa5",
+                        "on-secondary-fixed": "#002204",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#004883",
+                        "on-tertiary-fixed": "#410003",
+                        "on-surface": "#191c1e",
+                        "tertiary-fixed": "#ffdad6",
+                        "on-primary-fixed": "#001c39",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#eceef0",
+                        "surface-variant": "#e0e3e5",
+                        "on-primary-container": "#c1d9ff",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb4ac",
+                        "secondary-fixed-dim": "#88d982",
+                        "on-secondary-fixed-variant": "#005312",
+                        "on-background": "#191c1e",
+                        "surface": "#f8f9fb",
+                        "on-surface-variant": "#424751",
+                        "inverse-surface": "#2d3133",
+                        "tertiary": "#92000e",
+                        "outline": "#727782",
+                        "tertiary-container": "#b81c20",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#a4c9ff",
+                        "surface-tint": "#1960a6",
+                        "inverse-primary": "#a4c9ff",
+                        "secondary-fixed": "#a3f69c",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#217128",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-bright": "#f8f9fb",
+                        "primary-fixed": "#d4e3ff",
+                        "primary": "#004782",
+                        "on-tertiary-container": "#ffccc6",
+                        "secondary-container": "#a0f399",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c2c6d2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(25, 28, 30, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .video-full {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-black font-body overflow-hidden">
+<!-- Expert's View (Background) -->
+<div class="fixed inset-0 z-0 overflow-hidden bg-on-surface">
+<img alt="Professional expert smiling warmly at the camera in a modern office, cinematic lighting, shallow depth of field" class="video-full opacity-90" data-alt="Professional expert smiling warmly at the camera in a modern office, cinematic lighting, shallow depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP1Rjk0RSc3zy1heV4lLQ6GbldOTsp5aa_OrbZJ7Vkx4XkaO72aI8OZ_uIy2u20g1cvf0GEkALSDjskZULPEgL7m60aqMnZRuRbLqGDXpvFGZ1bbI_wvrFtN8vwVdNu87WWGZ1VLHtOTLpaYaDCozhawmKXoQqytVyQ4YH6OyEeeZv5UJ9fJreW9mZR1iJB4vQBFkdsgG70vVDkYKS14wYNmp_J5HmC6npowW2s5rMkbJUtTY5OCGUgdwEygBJ6VmqaDixQQNuzGFB"/>
+<!-- Gradient overlay for controls legibility -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40 pointer-events-none"></div>
+</div>
+<!-- Top Overlay: Identity & Session Details -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-start p-6">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center px-3 py-1 bg-secondary text-on-secondary rounded-full text-xs font-bold uppercase tracking-wider">
+                    En sesión
+                </span>
+<h1 class="text-white font-headline font-bold text-xl drop-shadow-md">Dr. Alejandro Méndez</h1>
+</div>
+<div class="glass-panel px-3 py-1 rounded-lg w-fit">
+<span class="text-white/90 text-sm font-medium">Costo fijo: $450 MXN</span>
+</div>
+</div>
+<div class="glass-panel px-4 py-2 rounded-2xl flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 1;">timer</span>
+<span class="text-white font-mono text-lg font-semibold">12:45</span>
+</div>
+</header>
+<!-- Chat Overlay Area (Bottom-Left) -->
+<div class="fixed bottom-32 left-6 right-32 z-40 max-w-md">
+<div class="flex flex-col gap-3">
+<div class="glass-panel p-3 rounded-xl border-l-4 border-primary-container animate-fade-in">
+<p class="text-white/80 text-xs font-semibold mb-1">Dr. Alejandro</p>
+<p class="text-white text-sm">Por favor, intente acercar la cámara al panel de fusibles para ver mejor el cableado.</p>
+</div>
+<div class="flex gap-2 items-center bg-black/30 backdrop-blur-md rounded-full px-4 py-2 border border-white/10">
+<input class="bg-transparent border-none focus:ring-0 text-white placeholder-white/40 text-sm w-full py-1" placeholder="Escribe instrucciones..." type="text"/>
+<button class="text-white/80 hover:text-white">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<!-- User Camera Preview (Bottom-Right) -->
+<div class="fixed bottom-32 right-6 w-28 h-40 md:w-40 md:h-56 z-50 rounded-2xl overflow-hidden border-2 border-white/20 shadow-2xl bg-slate-800">
+<img alt="Close-up POV of a customer holding a smartphone camera in a bright home setting" class="video-full scale-x-[-1]" data-alt="Close-up POV of a customer holding a smartphone camera in a bright home setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9q3VgJ5H4MXH6WZ7ZfNrDJm6F7-PMqp1JKYfzrppyNyBEGzUjKc8YsVuRwc0SHZmv3ROZRTC9Rsca5ZKgS9xz0lekcewlDvsN7tQAgPB_-2NOaErcfhfTtZkhJxVufjIwBm0HShiUOuuxvJK-DTU28yPI_3bsD8lZYOL73dJLiYyNU4tT3h7xD6HudlXlGd2vIuXt0DDjtJPnpWOncZDSixj1sQCWv7djkziqLE2-0vJZOM1GheULWgdJI-pPWpxvblcrBFsOdkqX"/>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 bg-black/40 px-1.5 py-0.5 rounded text-[10px] text-white">
+<span class="w-1.5 h-1.5 bg-secondary rounded-full animate-pulse"></span>
+            Tú
+        </div>
+</div>
+<!-- Bottom Controls Shell -->
+<footer class="fixed bottom-0 left-0 w-full z-50 px-6 pb-10">
+<div class="max-w-xl mx-auto glass-panel rounded-[40px] px-8 py-5 flex justify-between items-center shadow-2xl border border-white/5">
+<!-- Mute -->
+<button class="flex flex-col items-center gap-1 group">
+<div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white group-hover:bg-white/20 transition-all active:scale-90">
+<span class="material-symbols-outlined">mic</span>
+</div>
+<span class="text-[10px] text-white/70 font-medium">Silenciar</span>
+</button>
+<!-- Flip Camera -->
+<button class="flex flex-col items-center gap-1 group">
+<div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white group-hover:bg-white/20 transition-all active:scale-90">
+<span class="material-symbols-outlined">flip_camera_ios</span>
+</div>
+<span class="text-[10px] text-white/70 font-medium">Girar</span>
+</button>
+<!-- Hang Up (Primary Action) -->
+<button class="flex flex-col items-center gap-1 group -mt-4">
+<div class="w-16 h-16 rounded-full bg-tertiary flex items-center justify-center text-white shadow-lg shadow-tertiary/40 group-hover:bg-tertiary/90 transition-all active:scale-95">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">call_end</span>
+</div>
+<span class="text-xs text-white font-bold mt-1">Finalizar</span>
+</button>
+<!-- Flashlight -->
+<button class="flex flex-col items-center gap-1 group">
+<div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white group-hover:bg-white/20 transition-all active:scale-90">
+<span class="material-symbols-outlined">flashlight_on</span>
+</div>
+<span class="text-[10px] text-white/70 font-medium">Luz</span>
+</button>
+<!-- Chat Focus -->
+<button class="flex flex-col items-center gap-1 group">
+<div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white group-hover:bg-white/20 transition-all active:scale-90">
+<span class="material-symbols-outlined">chat_bubble</span>
+</div>
+<span class="text-[10px] text-white/70 font-medium">Chat</span>
+</button>
+</div>
+</footer>
+<!-- Signal Quality Indicator -->
+<div class="fixed top-24 right-6 z-50 flex flex-col items-end gap-1">
+<div class="flex gap-0.5 items-end h-3">
+<div class="w-1 h-1 bg-secondary rounded-full"></div>
+<div class="w-1 h-2 bg-secondary rounded-full"></div>
+<div class="w-1 h-3 bg-secondary rounded-full"></div>
+<div class="w-1 h-2 bg-white/30 rounded-full"></div>
+</div>
+<span class="text-[9px] font-bold text-white/60 tracking-widest uppercase">HD Signal</span>
+</div>
+</body></html>
