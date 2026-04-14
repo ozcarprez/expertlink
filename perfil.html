@@ -90,14 +90,12 @@
       min-height: max(884px, 100dvh);
     }
   </style>
-  </head>
+</head>
 <body class="bg-background text-on-surface mb-24">
 <!-- Top Navigation Anchor (Shared Component Mapping) -->
 <header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-lg flex justify-between items-center px-5 h-16 w-full">
 <div class="flex items-center gap-3">
-<button class="w-10 h-10 flex items-center justify-center hover:bg-slate-200/50 transition-colors rounded-full active:scale-95">
-<span class="material-symbols-outlined text-blue-900">arrow_back</span>
-</button>
+<a class="w-10 h-10 flex items-center justify-center hover:bg-slate-200/50 transition-colors rounded-full active:scale-95" href="explorar.html"><span class="material-symbols-outlined text-blue-900">arrow_back</span></a>
 <span class="text-xl font-bold text-blue-900">ExpertLink</span>
 </div>
 <div class="flex items-center gap-4">
@@ -245,10 +243,7 @@
 <span class="material-symbols-outlined">calendar_today</span>
                 Agendar
             </button>
-<button class="flex-[3] bg-primary text-on-primary font-bold py-4 rounded-full shadow-lg shadow-primary/20 active:scale-95 transition-transform flex items-center justify-center gap-3">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">videocam</span>
-                Videollamar ahora · $80
-            </button>
+<a class="flex-[3] bg-primary text-on-primary font-bold py-4 rounded-full shadow-lg shadow-primary/20 active:scale-95 transition-transform flex items-center justify-center gap-3" href="pago.html"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">videocam</span>Videollamar ahora · $80</a>
 </div>
 </div>
 <!-- Bottom Navigation Shell (Filter Logic: Suppressed for Details Screen as per UX guidelines to prioritize content canvas) -->
