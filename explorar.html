@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ExpertLink - Encuentra a tu experto</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#93000e",
+                    "surface-dim": "#d8dadc",
+                    "background": "#f8f9fb",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#eff1f3",
+                    "secondary": "#1b6d24",
+                    "surface-container-high": "#e6e8ea",
+                    "primary-container": "#185fa5",
+                    "on-secondary-fixed": "#002204",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#004883",
+                    "on-tertiary-fixed": "#410003",
+                    "on-surface": "#191c1e",
+                    "tertiary-fixed": "#ffdad6",
+                    "on-primary-fixed": "#001c39",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "surface-variant": "#e0e3e5",
+                    "on-primary-container": "#c1d9ff",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb4ac",
+                    "secondary-fixed-dim": "#88d982",
+                    "on-secondary-fixed-variant": "#005312",
+                    "on-background": "#191c1e",
+                    "surface": "#f8f9fb",
+                    "on-surface-variant": "#424751",
+                    "inverse-surface": "#2d3133",
+                    "tertiary": "#92000e",
+                    "outline": "#727782",
+                    "tertiary-container": "#b81c20",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#a4c9ff",
+                    "surface-tint": "#1960a6",
+                    "inverse-primary": "#a4c9ff",
+                    "secondary-fixed": "#a3f69c",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#217128",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-bright": "#f8f9fb",
+                    "primary-fixed": "#d4e3ff",
+                    "primary": "#004782",
+                    "on-tertiary-container": "#ffccc6",
+                    "secondary-container": "#a0f399",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#c2c6d2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-lg flex justify-between items-center px-5 h-16 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high border border-outline-variant/20">
+<img class="w-full h-full object-cover" data-alt="portrait of a young man smiling in soft studio lighting with a neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABLzrjg7VHM4Ra9_W9NZROxPU-XDUiaCHV7-hq51m3wpXf1-4kEyds0Tr9HDWeXPAjjeH-1eh6m1eLBFXBxlJzNJsH1WU0KfmoLx1ptKtJ6st2_vfRSfJs49x6dZXzXed5JeJW8mIrf2ocQEqQIN6sC7TWbwzC18vJfywBS9NGj-ToKNOgYvFGtycAp7IYBXUCJaGzqzdXt2-kpio_geDp0oQ-XWJtqVxL1xp70h74yXpjYYDfzuvBdfmIJT8wOio4a46QUdzOP71J"/>
+</div>
+<span class="text-xl font-bold text-blue-900">ExpertLink</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-200/50 transition-colors active:scale-95 duration-150 text-blue-900">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-20 px-5">
+<!-- Hero Search Section -->
+<section class="mt-4 mb-8">
+<h1 class="text-[32px] font-extrabold tracking-tight text-on-surface leading-tight mb-6">
+                Encuentra a tu <br/><span class="text-primary">experto de confianza</span>
+</h1>
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-slate-400">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</div>
+<input class="w-full bg-surface-container-low border-none rounded-2xl py-4 pl-12 pr-4 focus:ring-2 focus:ring-primary/50 text-on-surface placeholder:text-slate-400 transition-all" placeholder="¿Qué servicio necesitas hoy?" type="text"/>
+</div>
+</section>
+<!-- Categories Pill-shaped -->
+<section class="mb-10 -mx-5 px-5">
+<div class="flex overflow-x-auto gap-3 hide-scrollbar pb-2">
+<button class="flex-none px-6 py-2.5 rounded-full bg-primary text-on-primary font-medium text-sm transition-transform active:scale-95">
+                    Todos
+                </button>
+<button class="flex-none px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium text-sm hover:bg-slate-200 transition-colors active:scale-95">
+                    Plomería
+                </button>
+<button class="flex-none px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium text-sm hover:bg-slate-200 transition-colors active:scale-95">
+                    Eléctrico
+                </button>
+<button class="flex-none px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium text-sm hover:bg-slate-200 transition-colors active:scale-95">
+                    Belleza
+                </button>
+<button class="flex-none px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium text-sm hover:bg-slate-200 transition-colors active:scale-95">
+                    Mecánica
+                </button>
+<button class="flex-none px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium text-sm hover:bg-slate-200 transition-colors active:scale-95">
+                    Aire acondicionado
+                </button>
+</div>
+</section>
+<!-- Expert List -->
+<section class="space-y-6">
+<div class="flex justify-between items-end mb-2">
+<h2 class="text-xl font-bold text-on-surface">Expertos Destacados</h2>
+<span class="text-primary text-sm font-semibold">Ver todos</span>
+</div>
+<!-- Expert Card 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.04)] flex gap-4 items-start relative transition-transform active:scale-[0.98]">
+<div class="relative flex-none">
+<div class="w-20 h-20 rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a middle-aged man with a kind expression, wearing a clean work uniform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXMDpvw3Cut2bmaWB241J9GfaqALpmKFvsOYGT_SNvgh1LY41EZli3s8vAFgpCG1K_W-SxpDDm8nsZEhehv4r6_dMF20fsd4g90FWMHTTD0Ryx982JsJuIGeRZY0JZ6_aDRCEXzBARAZ8n7_7x3AdWzuUN2NG6uIpXBbqP_LMK5fbcddFfWPKk2u34LMR-izZ_WV-KOmtbbQqAKYjsSyospUiLZNslgld57UcMxWNevG34jimUhU3Oy6MGNURb_6d9blkWc8JEUXeI"/>
+</div>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 bg-secondary rounded-full border-2 border-white"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-0.5">
+<h3 class="font-bold text-on-surface truncate">Juan Pérez</h3>
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-2">Maestro Plomero</p>
+<div class="flex items-center gap-3 mb-3">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-400 text-[18px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">4.9</span>
+</div>
+<span class="text-xs text-slate-400">(128 reseñas)</span>
+</div>
+<div class="flex justify-between items-center">
+<div class="text-primary font-bold">
+                            $450 <span class="text-[10px] uppercase font-medium text-slate-400">/ sesión</span>
+</div>
+<span class="text-[10px] px-2 py-1 rounded-md bg-secondary-container text-on-secondary-container font-bold">EN LÍNEA</span>
+</div>
+</div>
+</div>
+<!-- Expert Card 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.04)] flex gap-4 items-start relative transition-transform active:scale-[0.98]">
+<div class="relative flex-none">
+<div class="w-20 h-20 rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="professional woman specialist in a minimalist setting, bright natural lighting, professional attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFPcQZWOqqn8T3OwElunzVGO2m6BVG5OIS28Si7LPu0158O7n7EnTyCAkPvH-Do7FhESQ8zBNR6OgKpkzkONhizrq6R0-HHAT0jG9DaDndpFVgRhTzKRXHahledtTkXIBBRKfcA9GDWTwrl3dFhWom3TpxOpj7v_xd2hPxQ-OaDxqGAqu8mEeIq6VLpKVkwLZPOWHhCvt7KZj-kfGsvzs9w9LaAxJCEqJGsc6Cgn2QidI3Emzhr4-StBB2tSWK2ymYxFrmwpttOOip"/>
+</div>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 bg-secondary rounded-full border-2 border-white"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-0.5">
+<h3 class="font-bold text-on-surface truncate">Elena Rodríguez</h3>
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-2">Técnica Electricista</p>
+<div class="flex items-center gap-3 mb-3">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-400 text-[18px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">5.0</span>
+</div>
+<span class="text-xs text-slate-400">(84 reseñas)</span>
+</div>
+<div class="flex justify-between items-center">
+<div class="text-primary font-bold">
+                            $520 <span class="text-[10px] uppercase font-medium text-slate-400">/ sesión</span>
+</div>
+<span class="text-[10px] px-2 py-1 rounded-md bg-secondary-container text-on-secondary-container font-bold">EN LÍNEA</span>
+</div>
+</div>
+</div>
+<!-- Expert Card 3 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.04)] flex gap-4 items-start relative transition-transform active:scale-[0.98]">
+<div class="relative flex-none">
+<div class="w-20 h-20 rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="mechanic expert with focus and determination, blue workshop background with soft blurred lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD41Ns_cu9CYOlX7fJjIYgFUAuU_h7eti7_0HFNsz3k6GyxWBMGNNi68aQX_JXvHWS7YDB7YTH7fBKEFYwIbvAyq34I46hdYlt7rGVbKSBJ4565mMTU6EVAV9_n91KKHsqj41AF7IWXLOWqTthLVjfGVKNDK3zm9fMStZOfW9ACD6QMcvt2HbQykBekoaCFaaybr3Vsgt49zVxpRwpgt3xkb0M_TrE1Vd-ka0LCdYvVFbpidmtE7O_FUZtBUCt4_ERkkLUFufrJjM5F"/>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-0.5">
+<h3 class="font-bold text-on-surface truncate">Carlos Méndez</h3>
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-2">Mecánico Automotriz</p>
+<div class="flex items-center gap-3 mb-3">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-400 text-[18px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">4.8</span>
+</div>
+<span class="text-xs text-slate-400">(210 reseñas)</span>
+</div>
+<div class="flex justify-between items-center">
+<div class="text-primary font-bold">
+                            $380 <span class="text-[10px] uppercase font-medium text-slate-400">/ sesión</span>
+</div>
+<span class="text-[10px] px-2 py-1 rounded-md bg-surface-container-high text-on-surface-variant font-bold">OCUPADO</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-3 pb-6 bg-white shadow-[0_-4px_24px_0_rgba(0,0,0,0.06)] z-50 rounded-t-3xl">
+<div class="flex flex-col items-center justify-center bg-blue-100 text-blue-900 rounded-2xl px-5 py-1.5 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="text-[11px] font-medium mt-0.5">Explorar</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-5 py-1.5 hover:text-blue-700 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="text-[11px] font-medium mt-0.5">Citas</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-5 py-1.5 hover:text-blue-700 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="text-[11px] font-medium mt-0.5">Mensajes</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-5 py-1.5 hover:text-blue-700 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-[11px] font-medium mt-0.5">Panel</span>
+</div>
+</nav>
+</body></html>
