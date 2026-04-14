@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Conectando con Experto - ExpertLink</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#93000e",
+                        "surface-dim": "#d8dadc",
+                        "background": "#f8f9fb",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#eff1f3",
+                        "secondary": "#1b6d24",
+                        "surface-container-high": "#e6e8ea",
+                        "primary-container": "#185fa5",
+                        "on-secondary-fixed": "#002204",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#004883",
+                        "on-tertiary-fixed": "#410003",
+                        "on-surface": "#191c1e",
+                        "tertiary-fixed": "#ffdad6",
+                        "on-primary-fixed": "#001c39",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#eceef0",
+                        "surface-variant": "#e0e3e5",
+                        "on-primary-container": "#c1d9ff",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb4ac",
+                        "secondary-fixed-dim": "#88d982",
+                        "on-secondary-fixed-variant": "#005312",
+                        "on-background": "#191c1e",
+                        "surface": "#f8f9fb",
+                        "on-surface-variant": "#424751",
+                        "inverse-surface": "#2d3133",
+                        "tertiary": "#92000e",
+                        "outline": "#727782",
+                        "tertiary-container": "#b81c20",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#a4c9ff",
+                        "surface-tint": "#1960a6",
+                        "inverse-primary": "#a4c9ff",
+                        "secondary-fixed": "#a3f69c",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#217128",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-bright": "#f8f9fb",
+                        "primary-fixed": "#d4e3ff",
+                        "primary": "#004782",
+                        "on-tertiary-container": "#ffccc6",
+                        "secondary-container": "#a0f399",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c2c6d2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.33); opacity: 0; }
+            80%, 100% { opacity: 0; }
+        }
+        @keyframes custom-ping {
+            75%, 100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+        .animate-subtle-ping {
+            animation: custom-ping 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-surface flex flex-col min-h-screen">
+<!-- TopAppBar - Suppressed Navigation Shell for focused task -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-lg flex justify-between items-center px-5 h-16 w-full">
+<div class="flex items-center gap-2">
+<span class="text-xl font-bold text-blue-900 font-headline">ExpertLink</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-outline">more_vert</span>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center justify-center px-6 pt-16 pb-24">
+<!-- Connection Visualizer -->
+<div class="relative flex items-center justify-center mb-12">
+<!-- Pulsing background rings -->
+<div class="absolute w-64 h-64 bg-primary/5 rounded-full animate-subtle-ping"></div>
+<div class="absolute w-48 h-48 bg-primary/10 rounded-full animate-subtle-ping" style="animation-delay: 0.5s;"></div>
+<!-- Expert Avatar Container -->
+<div class="relative z-10 p-1.5 bg-surface-container-lowest rounded-full shadow-sm">
+<div class="w-32 h-32 rounded-full overflow-hidden border-4 border-surface-container-low">
+<img alt="Avatar del Experto" class="w-full h-full object-cover" data-alt="Close up portrait of a professional architect in his 40s wearing a light blue shirt, looking friendly and reliable, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQMeCtMhwqMy5yqSegK1-BLh_LpSNIciuL3gOxv6Smxl96CUj3nepKpZV2PG0GwM3QWPmd67py_keqqpw3zG-Vy-i0ZSEMI8yV7fthXY7Rei53OLlWy4hTCXx1S7WW35t4vhO3oqyExhIg7NPOKyulwVSNIJEJrf7yy54fP2qI4EvY0Y6i4SbBvlvOLqAoVE7KSgQplFp-dXnh5l2tTUaLFjyI_4CAFIVs8mKjwI-LC-lCGZWELmLRKnhxzcknvmLow0qXucToIw4E"/>
+</div>
+<!-- Connection Status Badge -->
+<div class="absolute bottom-1 right-1 bg-secondary w-8 h-8 rounded-full border-4 border-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[16px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+</div>
+</div>
+<!-- Connection Content -->
+<div class="text-center max-w-sm">
+<h1 class="font-headline font-bold text-2xl text-on-surface mb-2 tracking-tight">Conectando con Arq. Javier Solis</h1>
+<p class="text-on-surface-variant font-body leading-relaxed mb-8">
+                Estamos estableciendo una conexión segura para tu consulta técnica.
+            </p>
+<!-- Tonal Info Box (Editorial Reliability) -->
+<div class="bg-surface-container-low rounded-xl p-6 mb-12 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div class="text-left">
+<span class="block text-[11px] uppercase tracking-wider font-semibold text-outline">Espera estimada</span>
+<span class="block font-headline font-bold text-lg text-primary">45 segundos</span>
+</div>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant/30"></div>
+<div class="text-right">
+<span class="material-symbols-outlined text-secondary animate-pulse" style="font-variation-settings: 'FILL' 1;">wifi_calling_3</span>
+</div>
+</div>
+<!-- Action Area -->
+<div class="space-y-4">
+<p class="text-sm text-outline font-medium">Por favor, no cierres esta pantalla</p>
+<!-- Cancel Action (Tertiary/Ghost Style) -->
+<button class="w-full py-4 text-tertiary font-semibold hover:bg-tertiary-fixed/20 transition-colors rounded-full active:scale-95 duration-150">
+                    Cancelar conexión
+                </button>
+</div>
+</div>
+</main>
+<!-- Bottom Aesthetic Detail (No NavBar for Focus) -->
+<footer class="fixed bottom-0 w-full p-8 flex justify-center">
+<div class="flex gap-1.5">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-primary/40"></div>
+<div class="w-2 h-2 rounded-full bg-primary/20"></div>
+</div>
+</footer>
+<!-- Accessibility / Status Hint -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 bg-on-surface/90 text-surface-container-lowest px-4 py-2 rounded-full text-xs font-medium tracking-wide backdrop-blur-md opacity-80">
+        CIFRADO DE EXTREMO A EXTREMO
+    </div>
+</body></html>
