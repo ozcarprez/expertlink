@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Finalizar Pago - ExpertLink</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#93000e",
+                        "surface-dim": "#d8dadc",
+                        "background": "#f8f9fb",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#eff1f3",
+                        "secondary": "#1b6d24",
+                        "surface-container-high": "#e6e8ea",
+                        "primary-container": "#185fa5",
+                        "on-secondary-fixed": "#002204",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#004883",
+                        "on-tertiary-fixed": "#410003",
+                        "on-surface": "#191c1e",
+                        "tertiary-fixed": "#ffdad6",
+                        "on-primary-fixed": "#001c39",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#eceef0",
+                        "surface-variant": "#e0e3e5",
+                        "on-primary-container": "#c1d9ff",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb4ac",
+                        "secondary-fixed-dim": "#88d982",
+                        "on-secondary-fixed-variant": "#005312",
+                        "on-background": "#191c1e",
+                        "surface": "#f8f9fb",
+                        "on-surface-variant": "#424751",
+                        "inverse-surface": "#2d3133",
+                        "tertiary": "#92000e",
+                        "outline": "#727782",
+                        "tertiary-container": "#b81c20",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#a4c9ff",
+                        "surface-tint": "#1960a6",
+                        "inverse-primary": "#a4c9ff",
+                        "secondary-fixed": "#a3f69c",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#217128",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-bright": "#f8f9fb",
+                        "primary-fixed": "#d4e3ff",
+                        "primary": "#004782",
+                        "on-tertiary-container": "#ffccc6",
+                        "secondary-container": "#a0f399",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c2c6d2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-lg flex justify-between items-center px-5 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-200/50 transition-colors rounded-full active:scale-95 duration-150">
+<span class="material-symbols-outlined text-blue-900">arrow_back</span>
+</button>
+<span class="text-xl font-bold text-blue-900">ExpertLink</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-900">notifications</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a professional man with a friendly expression in a brightly lit modern office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYuXGqB4SDzx-2ob5HfoLCkhDHEQO8jiUHN1ew0GVUNHkobwD3NFe7zdOjc_9vsyKpja0GhVr2Y11SXuWF9SE3JuHUGfwABEiF0OXgM5q58VG-VJJZogtzokaxUgqbdfUJMEBxbNkD2zR4uMcKHTcjNQRM3ezoTqZAO8MIf896FzMyb5H7taIyY9JTXbaWm9huHCanroi0Ba_eoM9AspQWUgL_5o72JcpPLLfaoDQ_7qDGDxxiG9if_FxqolYcrgaZaFb1-XYgeEjW"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-5 max-w-lg mx-auto">
+<!-- Page Title -->
+<div class="mb-8">
+<h1 class="text-3xl font-extrabold text-on-surface tracking-tight leading-tight">Finalizar y pagar</h1>
+<p class="text-on-surface-variant font-body mt-2">Confirma los detalles de tu sesión de consultoría.</p>
+</div>
+<!-- Session Summary Card -->
+<section class="mb-8">
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-[0_-4px_24px_0_rgba(0,0,0,0.02)]">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-16 h-16 rounded-xl overflow-hidden shadow-sm">
+<img alt="Expert" class="w-full h-full object-cover" data-alt="Professional woman architect sitting in a bright studio with blueprints and warm morning sunlight, sophisticated editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApzQEEJrqxcfvBJ0pdWyrx3mzQ3jPAytvcU45V9psEHbx1oW9B2H09G7ZXiqy76ZW0sZ5tKPU_U1SdqXNdaikUUT7Gpti_Lbhi9QFZOIIRxYMKCQcNwrhYIhnN3GlWiKXEV9N8qwyORuFn3afuh2DoGBF3DpijBGVfo7fXrxHxzBCt4qtvxwT9Hw3cVmYsM5E42GegEJwGb2I5zcPTR29pwMd1yv8cq0DIq8T5-MgWsWSdU1Isf2jltH7oL4kcrHCDI21CMgCO6GAI"/>
+</div>
+<div class="flex-1">
+<h2 class="text-lg font-bold text-on-surface leading-tight">Dra. Elena Ramírez</h2>
+<p class="text-on-surface-variant text-sm font-medium">Arquitectura Sustentable</p>
+</div>
+</div>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">calendar_today</span>
+<span class="text-on-surface font-semibold text-sm">Mañana, 10:00 AM</span>
+</div>
+<div class="text-primary font-bold text-lg">$1,250 MXN</div>
+</div>
+</div>
+</section>
+<!-- Payment Methods -->
+<section class="mb-8">
+<h3 class="text-sm font-bold text-on-surface-variant uppercase tracking-widest mb-4">Método de Pago</h3>
+<div class="space-y-3">
+<!-- Card Option -->
+<label class="relative flex items-center p-4 bg-surface-container-lowest rounded-xl cursor-pointer group hover:bg-surface-container transition-colors">
+<input checked="" class="hidden peer" name="payment" type="radio"/>
+<div class="w-10 h-10 bg-surface-container-high rounded-lg flex items-center justify-center mr-4">
+<span class="material-symbols-outlined text-primary">credit_card</span>
+</div>
+<div class="flex-1">
+<p class="text-on-surface font-semibold">Tarjeta de Débito/Crédito</p>
+<p class="text-on-surface-variant text-xs">•••• 4242</p>
+</div>
+<div class="w-6 h-6 border-2 border-outline-variant rounded-full flex items-center justify-center peer-checked:border-primary peer-checked:bg-primary transition-all">
+<div class="w-2.5 h-2.5 bg-white rounded-full opacity-0 peer-checked:opacity-100"></div>
+</div>
+</label>
+<!-- Apple Pay -->
+<label class="relative flex items-center p-4 bg-surface-container-lowest rounded-xl cursor-pointer group hover:bg-surface-container transition-colors">
+<input class="hidden peer" name="payment" type="radio"/>
+<div class="w-10 h-10 bg-black rounded-lg flex items-center justify-center mr-4">
+<svg class="w-6 h-6 text-white" fill="currentColor" viewbox="0 0 24 24"><path d="M17.05 20.28c-.96.7-1.86.81-2.73.82-1.01 0-1.8-.62-2.82-.62-1.02 0-1.92.59-2.78.61-.75.01-1.63-.16-2.56-.81-1.93-1.33-3.04-4.22-3.04-6.3 0-2.33 1.25-3.66 2.5-3.66.75 0 1.48.45 1.94.45.45 0 1.29-.53 2.16-.53 1.05 0 2.21.57 2.92 1.48-1.57.94-1.31 3.25.26 4.02.6.3 1.25.43 1.83.33-.21.73-.68 1.47-1.18 2.05-.18.21-.37.4-.5.56zm-1.82-13.82c-.08-.01-.15-.01-.23-.01-.84 0-1.83.6-2.39 1.29-.6.74-.9 1.63-.82 2.41.08.01.17.02.26.02.77 0 1.76-.56 2.27-1.28.56-.79.79-1.62.68-2.43z"></path></svg>
+</div>
+<div class="flex-1">
+<p class="text-on-surface font-semibold">Apple Pay</p>
+</div>
+<div class="w-6 h-6 border-2 border-outline-variant rounded-full flex items-center justify-center peer-checked:border-primary peer-checked:bg-primary transition-all">
+<div class="w-2.5 h-2.5 bg-white rounded-full opacity-0 peer-checked:opacity-100"></div>
+</div>
+</label>
+<!-- Google Pay -->
+<label class="relative flex items-center p-4 bg-surface-container-lowest rounded-xl cursor-pointer group hover:bg-surface-container transition-colors">
+<input class="hidden peer" name="payment" type="radio"/>
+<div class="w-10 h-10 bg-white border border-outline-variant rounded-lg flex items-center justify-center mr-4">
+<svg class="w-6 h-6" viewbox="0 0 24 24"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.91 3.21-1.91 4.21-1.24 1.24-3.14 2.59-6.39 2.59-5.11 0-9.28-4.14-9.28-9.25s4.17-9.25 9.28-9.25c2.84 0 4.94 1.13 6.44 2.53l2.31-2.31c-2-1.92-4.63-3.41-8.75-3.41-7.23 0-13.11 5.86-13.11 13.09s5.88 13.09 13.11 13.09c3.91 0 6.87-1.28 9.17-3.68 2.37-2.37 3.12-5.71 3.12-8.41 0-.64-.06-1.25-.16-1.82h-12.02z" fill="#4285F4"></path></svg>
+</div>
+<div class="flex-1">
+<p class="text-on-surface font-semibold">Google Pay</p>
+</div>
+<div class="w-6 h-6 border-2 border-outline-variant rounded-full flex items-center justify-center peer-checked:border-primary peer-checked:bg-primary transition-all">
+<div class="w-2.5 h-2.5 bg-white rounded-full opacity-0 peer-checked:opacity-100"></div>
+</div>
+</label>
+</div>
+</section>
+<!-- Discount Code -->
+<section class="mb-8">
+<div class="bg-surface-container-low rounded-xl p-1 flex items-center">
+<input class="bg-transparent border-none focus:ring-0 flex-1 px-4 text-sm font-medium" placeholder="Código de descuento" type="text"/>
+<button class="bg-surface-container-highest text-primary font-bold text-xs uppercase px-5 py-2.5 rounded-lg hover:bg-white transition-all active:scale-95">Aplicar</button>
+</div>
+</section>
+<!-- Total Breakdown -->
+<section class="mb-8">
+<div class="space-y-3 px-1">
+<div class="flex justify-between text-on-surface-variant font-medium">
+<span>Sesión (60 min)</span>
+<span>$1,250.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant font-medium">
+<span>Tarifa de servicio</span>
+<span>$45.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant font-medium">
+<span>Descuento</span>
+<span class="text-secondary">- $0.00</span>
+</div>
+<div class="pt-4 border-t border-outline-variant flex justify-between items-end">
+<span class="text-on-surface font-bold text-lg">Total</span>
+<div class="text-right">
+<span class="text-primary font-extrabold text-2xl tracking-tight">$1,295.00</span>
+<p class="text-[10px] text-on-surface-variant uppercase font-bold tracking-widest mt-1">Pesos Mexicanos</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Note and Action -->
+<section class="text-center">
+<p class="text-xs text-on-surface-variant font-medium leading-relaxed mb-6 px-4">
+<span class="material-symbols-outlined text-sm align-middle mr-1">lock</span>
+                El pago se reserva y se confirma al terminar la sesión. Tu información está protegida por encriptación de grado bancario.
+            </p>
+<button class="w-full bg-primary text-on-primary py-5 rounded-full font-bold text-lg shadow-lg shadow-primary/20 hover:bg-blue-900 transition-all active:scale-95 duration-150">
+                Pagar y conectar
+            </button>
+</section>
+</main>
+<!-- Navigation suppressed for transactional screen logic -->
+</body></html>
